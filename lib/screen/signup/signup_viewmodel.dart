@@ -14,7 +14,7 @@ class SignupViewModel extends FormViewModel with $App {
   final _formKey = GlobalKey<FormState>();
   get formKey => _formKey;
   final CountryModel _countryModel = CountryModel();
-  get countrymodel => _countryModel;
+  get countryModel => _countryModel;
   ValidationModel validationModel = ValidationModel();
   AuthModel authModel = AuthModel();
   submitForm() async {

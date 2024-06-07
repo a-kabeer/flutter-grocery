@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:grocerystacked/utils/app_color.dart';
 
 class CustomTextFormField extends StatelessWidget {
   final TextEditingController controller;
@@ -28,17 +27,14 @@ class CustomTextFormField extends StatelessWidget {
         errorText: errorText,
         contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
         filled: true,
-        fillColor: Colors.white,
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8),
           borderSide: BorderSide(
-            color: AppColor.greenSwatch,
           ),
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8),
           borderSide: BorderSide(
-            color: AppColor.greenSwatch,
           ),
         ),
         focusedBorder: OutlineInputBorder(

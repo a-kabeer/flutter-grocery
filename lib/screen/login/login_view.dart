@@ -12,7 +12,9 @@ class LoginView extends StatelessWidget with $App {
 
   @override
   Widget build(BuildContext context) {
+    print('vv');
     return ViewModelBuilder<LoginViewModel>.reactive(
+      
       viewModelBuilder: () => LoginViewModel(),
       // onViewModelReady: (viewModel) => viewModel.init(context),
       builder: (context, model, child) => Scaffold(

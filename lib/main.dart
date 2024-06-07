@@ -34,11 +34,11 @@ class MyApp extends StatelessWidget {
         onGenerateRoute: StackedRouter().onGenerateRoute,
         title: 'Grocery App',
         theme: FlexThemeData.light(
-          scheme: FlexScheme.greenM3,
+          scheme: FlexScheme.amber,
           useMaterial3: true,
         ),
         darkTheme: FlexThemeData.dark(
-          scheme: FlexScheme.greenM3,
+          scheme: FlexScheme.amber,
           useMaterial3: true,
         ),
         themeMode: model.themeMode,
