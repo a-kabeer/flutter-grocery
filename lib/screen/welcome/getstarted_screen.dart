@@ -1,5 +1,6 @@
 import 'package:grocerystacked/app/app.router.dart';
 import 'package:grocerystacked/screen/welcome/getstarted_viewmodel.dart';
+import 'package:grocerystacked/screen/widgets/custom_theme_toggle_button.dart';
 import 'package:grocerystacked/utils/app_images.dart';
 import 'package:grocerystacked/screen/widgets/custom_button.dart';
 import 'package:grocerystacked/screen/widgets/custom_text.dart';
@@ -42,6 +43,10 @@ class GetStartedView extends StatelessWidget {
                       fontSize: 16,
                       color: Colors.white,
                     ),
+                  ),
+                  const ThemeToggleButton(),
+                  TextField(
+                    decoration: InputDecoration(hintText: 'testing'),
                   ),
                   SizedBox(
                     height: 20,

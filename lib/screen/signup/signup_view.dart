@@ -140,11 +140,11 @@ class SignupView extends StatelessWidget with $App {
                     ),
                     SizedBox(height: 20),
                     CustomButton(
-                        buttonText: 'Signup',
-                        onPressed: () {
-                          model.submitForm();
-                        },
-                        buttonTextColor: Colors.white),
+                      buttonText: 'Signup',
+                      onPressed: () {
+                        model.submitForm();
+                      },
+                    ),
                     SizedBox(height: 20),
                     Text('Or connect with social media'),
                     SizedBox(height: 20),

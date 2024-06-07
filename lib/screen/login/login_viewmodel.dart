@@ -9,9 +9,9 @@ import 'package:stacked/stacked.dart';
 import 'package:stacked_services/stacked_services.dart';
 
 class LoginViewModel extends FormViewModel with $App {
-  void init(BuildContext context) {
-    // checkLoginStatus();
-  }
+  // void init(BuildContext context) {
+  // checkLoginStatus();
+  // }
 
   final NavigationService navigationService = locator<NavigationService>();
 
@@ -23,8 +23,8 @@ class LoginViewModel extends FormViewModel with $App {
     if (_formKey.currentState!.validate()) {
       bool isSignedIn = await authModel.signInWithEmailAndPassword();
       if (isSignedIn) {
-        LocalStorage.setString(LocalStorage.email, emailController.text);
-        LocalStorage.setString(LocalStorage.password, passwordController.text);
+        // LocalStorage.setString(LocalStorage.email, emailController.text);
+        // LocalStorage.setString(LocalStorage.password, passwordController.text);
         print('login successful');
         navigationService.replaceWithHomeView();
       } else {

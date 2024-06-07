@@ -10,6 +10,8 @@ import 'package:stacked_services/src/navigation/navigation_service.dart';
 import 'package:stacked_shared/stacked_shared.dart';
 
 import '../services/cart_model.dart';
+import '../services/favorite_model.dart';
+import '../services/theme_model.dart';
 
 final locator = StackedLocator.instance;
 
@@ -24,4 +26,6 @@ Future<void> setupLocator({
 // Register dependencies
   locator.registerSingleton(NavigationService());
   locator.registerSingleton(CartService());
+  locator.registerSingleton(FavoriteService());
+  locator.registerSingleton(ThemeViewModel());
 }

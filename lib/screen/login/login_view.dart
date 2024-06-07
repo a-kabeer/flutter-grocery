@@ -15,7 +15,7 @@ class LoginView extends StatelessWidget with $App {
   Widget build(BuildContext context) {
     return ViewModelBuilder<LoginViewModel>.reactive(
       viewModelBuilder: () => LoginViewModel(),
-      onViewModelReady: (viewModel) => viewModel.init(context),
+      // onViewModelReady: (viewModel) => viewModel.init(context),
       builder: (context, model, child) => Scaffold(
         body: Container(
           decoration: BoxDecoration(
@@ -40,7 +40,7 @@ class LoginView extends StatelessWidget with $App {
                       Container(
                         width: MediaQuery.of(context).size.width,
                         decoration: BoxDecoration(
-                          color: AppColor.greenSwatch,
+                          color: Theme.of(context).primaryColor,
                           borderRadius: BorderRadius.only(
                               topLeft: Radius.circular(20),
                               bottomRight: Radius.circular(20)),
@@ -51,7 +51,6 @@ class LoginView extends StatelessWidget with $App {
                             text: 'Get your groceries with nectar',
                             fontSize: 24,
                             fontWeight: FontWeight.bold,
-                            color: Colors.white,
                           ),
                         ),
                       ),
@@ -74,11 +73,11 @@ class LoginView extends StatelessWidget with $App {
                       ),
                       SizedBox(height: 20),
                       CustomButton(
-                          buttonText: 'Login',
-                          onPressed: () {
-                            model.submitForm();
-                          },
-                          buttonTextColor: Colors.white),
+                        buttonText: 'Login',
+                        onPressed: () {
+                          model.submitForm();
+                        },
+                      ),
                       SizedBox(height: 20),
                       Text('Or connect with social media'),
                       SizedBox(height: 20),
@@ -87,7 +86,6 @@ class LoginView extends StatelessWidget with $App {
                         onPressed: model.loginWithGoogle,
                         icon: const Icon(
                           Icons.g_translate,
-                          color: Colors.white,
                         ),
                       ),
                       SizedBox(height: 10),
@@ -96,7 +94,6 @@ class LoginView extends StatelessWidget with $App {
                         onPressed: model.loginWithFacebook,
                         icon: const Icon(
                           Icons.facebook,
-                          color: Colors.white,
                         ),
                       ),
                     ],

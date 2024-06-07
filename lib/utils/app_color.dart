@@ -15,4 +15,5 @@ class AppColor {
   };
   static const MaterialColor greenSwatch =
       MaterialColor(0xFF53B175, _greenSwatch);
+      
 }

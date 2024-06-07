@@ -1,10 +1,12 @@
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:grocerystacked/app/app.locator.dart';
 import 'package:grocerystacked/app/app.router.dart';
 import 'package:grocerystacked/firebase_options.dart';
 import 'package:grocerystacked/services/shared_preference_model.dart';
-import 'package:grocerystacked/utils/app_color.dart';
+import 'package:grocerystacked/services/theme_model.dart';
 import 'package:flutter/material.dart';
+import 'package:stacked/stacked.dart';
 import 'package:stacked_services/stacked_services.dart';
 
 void main() async {
@@ -24,11 +26,23 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      navigatorKey: StackedService.navigatorKey,
-      onGenerateRoute: StackedRouter().onGenerateRoute,
-      title: 'Grocery App',
-      theme: ThemeData(primarySwatch: AppColor.greenSwatch),
+    return ViewModelBuilder<ThemeViewModel>.reactive(
+      viewModelBuilder: () => locator<ThemeViewModel>(),
+      builder: (context, model, child) => MaterialApp(
+        debugShowCheckedModeBanner: false,
+        navigatorKey: StackedService.navigatorKey,
+        onGenerateRoute: StackedRouter().onGenerateRoute,
+        title: 'Grocery App',
+        theme: FlexThemeData.light(
+          scheme: FlexScheme.greenM3,
+          useMaterial3: true,
+        ),
+        darkTheme: FlexThemeData.dark(
+          scheme: FlexScheme.greenM3,
+          useMaterial3: true,
+        ),
+        themeMode: model.themeMode,
+      ),
     );
   }
 }

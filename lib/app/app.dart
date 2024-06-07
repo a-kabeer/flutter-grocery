@@ -1,9 +1,13 @@
+import 'package:grocerystacked/screen/cart/cart_view.dart';
+import 'package:grocerystacked/screen/favorite/favorite_view.dart';
 import 'package:grocerystacked/screen/home/home_view.dart';
 import 'package:grocerystacked/screen/login/login_view.dart';
 import 'package:grocerystacked/screen/signup/signup_view.dart';
 import 'package:grocerystacked/screen/splashscreen/splash_view.dart';
 import 'package:grocerystacked/screen/welcome/getstarted_screen.dart';
 import 'package:grocerystacked/services/cart_model.dart';
+import 'package:grocerystacked/services/favorite_model.dart';
+import 'package:grocerystacked/services/theme_model.dart';
 import 'package:stacked/stacked_annotations.dart';
 import 'package:stacked_services/stacked_services.dart';
 
@@ -20,10 +24,15 @@ import 'package:stacked_services/stacked_services.dart';
     MaterialRoute(page: GetStartedView),
     MaterialRoute(page: LoginView),
     MaterialRoute(page: SignupView),
+    MaterialRoute(page: CartView),
+    MaterialRoute(page: FavoriteView),
   ],
   dependencies: [
     Singleton(classType: NavigationService),
-    Singleton(classType: CartService)
+    Singleton(classType: CartService),
+    Singleton(classType: FavoriteService),
+    Singleton(classType: ThemeViewModel),
+    
   ],
 )
 class App {}

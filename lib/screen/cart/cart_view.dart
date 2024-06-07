@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:grocerystacked/screen/cart/cart_viewmodel.dart';
 import 'package:stacked/stacked.dart';
 
-class CartPage extends StatelessWidget {
+class CartView extends StatelessWidget {
+  const CartView({super.key});
+
   @override
   Widget build(BuildContext context) {
     return ViewModelBuilder<CartViewModel>.reactive(
