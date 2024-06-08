@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:grocerystacked/app/app.locator.dart';
 import 'package:grocerystacked/services/auth_model.dart';
 import 'package:grocerystacked/services/cart_model.dart';

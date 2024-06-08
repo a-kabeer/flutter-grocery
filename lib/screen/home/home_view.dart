@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:grocerystacked/app/app.locator.dart';
 import 'package:grocerystacked/app/app.router.dart';
 import 'package:grocerystacked/screen/home/home_viewmodel.dart';
 import 'package:grocerystacked/screen/widgets/global_theme_toggle_button.dart';
 import 'package:grocerystacked/services/cart_model.dart';
-import 'package:grocerystacked/services/theme_model.dart';
 import 'package:stacked/stacked.dart';
-import 'package:stacked_services/stacked_services.dart';
 
 // ignore: must_be_immutable
 class HomeView extends StatelessWidget {
