@@ -3,8 +3,8 @@ import 'package:grocerystacked/services/theme_model.dart';
 import 'package:stacked/stacked.dart';
 import 'package:grocerystacked/app/app.locator.dart';
 
-class ThemeToggleButton extends StatelessWidget {
-  const ThemeToggleButton({super.key});
+class GlobalThemeToggleButton extends StatelessWidget {
+  const GlobalThemeToggleButton({super.key});
 
   @override
   Widget build(BuildContext context) {

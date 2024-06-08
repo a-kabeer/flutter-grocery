@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class CustomButton extends StatelessWidget {
+class GlobalElevatedButton extends StatelessWidget {
   final String buttonText;
   final Function() onPressed;
   final double? buttonRadius;
   final Icon? icon;
-  const CustomButton(
+  const GlobalElevatedButton(
       {super.key,
       required this.buttonText,
       required this.onPressed,

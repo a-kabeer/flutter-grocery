@@ -1,9 +1,9 @@
 import 'package:grocerystacked/app/app.router.dart';
 import 'package:grocerystacked/screen/welcome/getstarted_viewmodel.dart';
-import 'package:grocerystacked/screen/widgets/custom_theme_toggle_button.dart';
+import 'package:grocerystacked/screen/widgets/global_theme_toggle_button.dart';
 import 'package:grocerystacked/utils/app_images.dart';
-import 'package:grocerystacked/screen/widgets/custom_button.dart';
-import 'package:grocerystacked/screen/widgets/custom_text.dart';
+import 'package:grocerystacked/screen/widgets/global_elevated_button.dart';
+import 'package:grocerystacked/screen/widgets/global_text.dart';
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 
@@ -31,20 +31,20 @@ class GetStartedView extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Center(
-                    child: CustomText(
+                    child: GlobalText(
                       text: 'Welcome to our Store',
                       fontSize: 24,
                       color: Colors.white,
                     ),
                   ),
                   Center(
-                    child: CustomText(
+                    child: GlobalText(
                       text: 'Ger your groceries in as fast as one hour',
                       fontSize: 16,
                       color: Colors.white,
                     ),
                   ),
-                  const ThemeToggleButton(),
+                  const GlobalThemeToggleButton(),
                   TextField(
                     decoration: InputDecoration(hintText: 'testing'),
                   ),
@@ -60,7 +60,7 @@ class GetStartedView extends StatelessWidget {
                             0.75 /
                             2, // Divide by 2 to accommodate two buttons
 
-                        child: CustomButton(
+                        child: GlobalElevatedButton(
                             buttonText: 'Login',
                             onPressed: () {
                               viewModel.navigationService.navigateToLoginView();
@@ -74,7 +74,7 @@ class GetStartedView extends StatelessWidget {
                             0.75 /
                             2, // Divide by 2 to accommodate two buttons
 
-                        child: CustomButton(
+                        child: GlobalElevatedButton(
                           buttonText: 'Signup',
                           onPressed: () {
                             viewModel.navigationService.navigateToSignupView();

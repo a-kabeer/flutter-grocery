@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:grocerystacked/app/app.locator.dart';
 import 'package:grocerystacked/app/app.router.dart';
 import 'package:grocerystacked/screen/home/home_viewmodel.dart';
-import 'package:grocerystacked/screen/widgets/custom_theme_toggle_button.dart';
+import 'package:grocerystacked/screen/widgets/global_theme_toggle_button.dart';
 import 'package:grocerystacked/services/cart_model.dart';
 import 'package:grocerystacked/services/theme_model.dart';
 import 'package:stacked/stacked.dart';
@@ -57,7 +57,7 @@ class HomeView extends StatelessWidget {
       builder: (context, viewModel, child) => Scaffold(
         appBar: AppBar(
           actions: const [
-            ThemeToggleButton(),
+            GlobalThemeToggleButton(),
           ],
         ),
         body: ListView.builder(

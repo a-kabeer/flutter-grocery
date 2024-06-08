@@ -18,6 +18,5 @@ class FavoriteViewModel extends BaseViewModel {
     notifyListeners();
   }
 
-  @override
   List<ListenableServiceMixin> get reactiveServices => [_favoriteService];
 }

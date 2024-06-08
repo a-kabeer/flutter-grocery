@@ -1,7 +1,7 @@
 import 'package:grocerystacked/app/app.form.dart';
-import 'package:grocerystacked/screen/widgets/custom_button.dart';
-import 'package:grocerystacked/screen/widgets/custom_form_text_field.dart';
-import 'package:grocerystacked/screen/widgets/custom_text.dart';
+import 'package:grocerystacked/screen/widgets/global_elevated_button.dart';
+import 'package:grocerystacked/screen/widgets/global_form_text_field.dart';
+import 'package:grocerystacked/screen/widgets/global_text.dart';
 import 'package:grocerystacked/utils/app_images.dart';
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
@@ -14,7 +14,6 @@ class LoginView extends StatelessWidget with $App {
   Widget build(BuildContext context) {
     print('vv');
     return ViewModelBuilder<LoginViewModel>.reactive(
-      
       viewModelBuilder: () => LoginViewModel(),
       // onViewModelReady: (viewModel) => viewModel.init(context),
       builder: (context, model, child) => Scaffold(
@@ -48,7 +47,7 @@ class LoginView extends StatelessWidget with $App {
                         ),
                         height: 50,
                         child: Center(
-                          child: CustomText(
+                          child: GlobalText(
                             text: 'Get your groceries with nectar',
                             fontSize: 24,
                             fontWeight: FontWeight.bold,
@@ -56,7 +55,7 @@ class LoginView extends StatelessWidget with $App {
                         ),
                       ),
                       SizedBox(height: 20),
-                      CustomTextFormField(
+                      GlobalTextFormField(
                         controller: emailController,
                         hintText: 'Enter your email',
                         validator: model.validationModel.emailValidator,
@@ -64,7 +63,7 @@ class LoginView extends StatelessWidget with $App {
                         focusNode: model.emailFocusNode,
                       ),
                       SizedBox(height: 20),
-                      CustomTextFormField(
+                      GlobalTextFormField(
                         controller: passwordController,
                         obscureText: true,
                         hintText: 'Enter your password',
@@ -73,7 +72,7 @@ class LoginView extends StatelessWidget with $App {
                         focusNode: model.passwordFocusNode,
                       ),
                       SizedBox(height: 20),
-                      CustomButton(
+                      GlobalElevatedButton(
                         buttonText: 'Login',
                         onPressed: () {
                           model.submitForm();
@@ -82,7 +81,7 @@ class LoginView extends StatelessWidget with $App {
                       SizedBox(height: 20),
                       Text('Or connect with social media'),
                       SizedBox(height: 20),
-                      CustomButton(
+                      GlobalElevatedButton(
                         buttonText: 'login with Google',
                         onPressed: model.loginWithGoogle,
                         icon: const Icon(
@@ -90,7 +89,7 @@ class LoginView extends StatelessWidget with $App {
                         ),
                       ),
                       SizedBox(height: 10),
-                      CustomButton(
+                      GlobalElevatedButton(
                         buttonText: 'login with Facebook',
                         onPressed: model.loginWithFacebook,
                         icon: const Icon(

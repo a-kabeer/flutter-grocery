@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class CustomTextFormField extends StatelessWidget {
+class GlobalTextFormField extends StatelessWidget {
   final TextEditingController controller;
   final String? hintText;
   final bool? obscureText;
@@ -8,7 +8,7 @@ class CustomTextFormField extends StatelessWidget {
   final AutovalidateMode? autovalidateMode;
   final FocusNode? focusNode;
   final String? errorText;
-  const CustomTextFormField(
+  const GlobalTextFormField(
       {super.key,
       required this.controller,
       this.hintText,
@@ -29,25 +29,31 @@ class CustomTextFormField extends StatelessWidget {
         filled: true,
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8),
-          borderSide: BorderSide(
-          ),
+          borderSide: BorderSide(),
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8),
           borderSide: BorderSide(
+            color: Theme.of(context).colorScheme.secondary,
           ),
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8),
-          borderSide: BorderSide(),
+          borderSide: BorderSide(
+            color: Theme.of(context).colorScheme.primary,
+          ),
         ),
         errorBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8),
-          borderSide: BorderSide(),
+          borderSide: BorderSide(
+            color: Theme.of(context).colorScheme.error,
+          ),
         ),
         disabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8),
-          borderSide: BorderSide(),
+          borderSide: BorderSide(
+            color: Theme.of(context).colorScheme.outline,
+          ),
         ),
       ),
       obscureText: obscureText ?? false,
