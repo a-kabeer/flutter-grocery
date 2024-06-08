@@ -2,7 +2,6 @@ import 'package:grocerystacked/app/app.form.dart';
 import 'package:grocerystacked/app/app.locator.dart';
 import 'package:grocerystacked/app/app.router.dart';
 import 'package:grocerystacked/services/auth_model.dart';
-import 'package:grocerystacked/services/country_model.dart';
 import 'package:grocerystacked/services/validation_model.dart';
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
@@ -13,8 +12,6 @@ class SignupViewModel extends FormViewModel with $App {
 
   final _formKey = GlobalKey<FormState>();
   get formKey => _formKey;
-  final CountryModel _countryModel = CountryModel();
-  get countryModel => _countryModel;
   ValidationModel validationModel = ValidationModel();
   AuthModel authModel = AuthModel();
   submitForm() async {
