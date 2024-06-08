@@ -13,9 +13,7 @@ class GetStartedViewModel extends BaseViewModel {
 
   void checkLoginStatus() {
     String? storedEmail = LocalStorage.getString(LocalStorage.email);
-    print(storedEmail);
     String? storedPassword = LocalStorage.getString(LocalStorage.password);
-    print(storedPassword);
     if (storedEmail != null && storedPassword != null) {
       navigationService.replaceWithHomeView();
     }

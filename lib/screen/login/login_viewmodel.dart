@@ -19,17 +19,14 @@ class LoginViewModel extends FormViewModel with $App {
   get formKey => _formKey;
   ValidationModel validationModel = ValidationModel();
   AuthModel authModel = AuthModel();
-  submitForm() async {
+  submitForm(BuildContext context) async {
     if (_formKey.currentState!.validate()) {
-      bool isSignedIn = await authModel.signInWithEmailAndPassword();
+      bool isSignedIn = await authModel.signInWithEmailAndPassword(context);
       if (isSignedIn) {
         // LocalStorage.setString(LocalStorage.email, emailController.text);
         // LocalStorage.setString(LocalStorage.password, passwordController.text);
-        print('login successful');
         navigationService.replaceWithHomeView();
-      } else {
-        print('Not Available');
-      }
+      } else {}
     } else {
       if (validationModel.emailValidator(emailController.text) != null) {
         emailFocusNode.requestFocus();

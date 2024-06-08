@@ -43,8 +43,6 @@ class GlobalPhoneTextField extends StatelessWidget {
         validator: validator,
         keyboardType: TextInputType.phone,
         decoration: InputDecoration(
-          hintText: 'Enter your phone number',
-          hintStyle: TextStyle(color: Theme.of(context).hintColor),
           contentPadding:
               const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
           filled: true,
@@ -79,6 +77,7 @@ class GlobalPhoneTextField extends StatelessWidget {
           prefixIcon: Padding(
             padding: const EdgeInsets.only(left: 12),
             child: InternationalPhoneNumberInput(
+              maxLength: 15,
               selectorConfig: const SelectorConfig(
                 selectorType: PhoneInputSelectorType.DIALOG,
                 showFlags: true,
@@ -88,6 +87,8 @@ class GlobalPhoneTextField extends StatelessWidget {
                   TextStyle(color: Theme.of(context).colorScheme.onSurface),
               initialValue: viewModel.initialPhoneNumber,
               textFieldController: viewModel.phoneController,
+              validator: (_) => null, // Disable validation
+
               formatInput: false,
               inputDecoration: InputDecoration(
                 border: InputBorder.none, // Remove the default border

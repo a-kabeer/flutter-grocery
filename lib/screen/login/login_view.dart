@@ -12,7 +12,6 @@ class LoginView extends StatelessWidget with $App {
 
   @override
   Widget build(BuildContext context) {
-    print('vv');
     return ViewModelBuilder<LoginViewModel>.reactive(
       viewModelBuilder: () => LoginViewModel(),
       // onViewModelReady: (viewModel) => viewModel.init(context),
@@ -75,7 +74,7 @@ class LoginView extends StatelessWidget with $App {
                       GlobalElevatedButton(
                         buttonText: 'Login',
                         onPressed: () {
-                          model.submitForm();
+                          model.submitForm(context);
                         },
                       ),
                       SizedBox(height: 20),
