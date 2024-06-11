@@ -1,6 +1,7 @@
 import 'package:grocerystacked/app/app.router.dart';
 import 'package:grocerystacked/screen/welcome/getstarted_viewmodel.dart';
 import 'package:grocerystacked/screen/widgets/global_theme_toggle_button.dart';
+import 'package:grocerystacked/utils/app_color.dart';
 import 'package:grocerystacked/utils/app_images.dart';
 import 'package:grocerystacked/screen/widgets/global_elevated_button.dart';
 import 'package:grocerystacked/screen/widgets/global_text.dart';
@@ -12,6 +13,8 @@ class GetStartedView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    AppColor.initialize(context);
+
     return ViewModelBuilder.reactive(
       viewModelBuilder: () => GetStartedViewModel(),
       onViewModelReady: (viewModel) => viewModel.init(context),

@@ -7,7 +7,7 @@ import 'package:grocerystacked/screen/splashscreen/splash_view.dart';
 import 'package:grocerystacked/screen/welcome/getstarted_screen.dart';
 import 'package:grocerystacked/services/cart_model.dart';
 import 'package:grocerystacked/services/favorite_model.dart';
-import 'package:grocerystacked/services/theme_model.dart';
+import 'package:grocerystacked/screen/widgets/global_theme_switch.dart';
 import 'package:stacked/stacked_annotations.dart';
 import 'package:stacked_services/stacked_services.dart';
 

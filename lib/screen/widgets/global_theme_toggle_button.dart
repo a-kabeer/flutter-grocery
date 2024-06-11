@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:grocerystacked/services/theme_model.dart';
+import 'package:grocerystacked/screen/widgets/global_theme_switch.dart';
 import 'package:stacked/stacked.dart';
 import 'package:grocerystacked/app/app.locator.dart';
 

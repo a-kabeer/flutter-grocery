@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grocerystacked/utils/app_color.dart';
 
 class GlobalTextFormField extends StatelessWidget {
   final TextEditingController controller;
@@ -34,25 +35,25 @@ class GlobalTextFormField extends StatelessWidget {
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8),
           borderSide: BorderSide(
-            color: Theme.of(context).colorScheme.secondary,
+            color: AppColor.secondary,
           ),
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8),
           borderSide: BorderSide(
-            color: Theme.of(context).colorScheme.primary,
+            color: AppColor.primary,
           ),
         ),
         errorBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8),
           borderSide: BorderSide(
-            color: Theme.of(context).colorScheme.error,
+            color: AppColor.error,
           ),
         ),
         disabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8),
           borderSide: BorderSide(
-            color: Theme.of(context).colorScheme.outline,
+            color: AppColor.outline,
           ),
         ),
       ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grocerystacked/utils/app_color.dart';
 
 class GlobalElevatedButton extends StatelessWidget {
   final String buttonText;
@@ -19,16 +20,17 @@ class GlobalElevatedButton extends StatelessWidget {
       height: 50,
       child: ElevatedButton.icon(
         style: ButtonStyle(
+          backgroundColor: WidgetStateProperty.all(AppColor.primary),
           shape: WidgetStateProperty.all<RoundedRectangleBorder>(
               RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(
-                buttonRadius ?? 25), // Set the border radius to 25
+            borderRadius: BorderRadius.circular(buttonRadius ?? 25),
           )),
         ),
         onPressed: onPressed,
         icon: icon,
         label: Text(
           buttonText,
+          style: TextStyle(color: AppColor.onPrimary),
         ),
       ),
     );

@@ -3,6 +3,7 @@ import 'package:grocerystacked/app/app.router.dart';
 import 'package:grocerystacked/screen/home/home_viewmodel.dart';
 import 'package:grocerystacked/screen/widgets/global_theme_toggle_button.dart';
 import 'package:grocerystacked/services/cart_model.dart';
+import 'package:grocerystacked/utils/app_color.dart';
 import 'package:stacked/stacked.dart';
 
 // ignore: must_be_immutable
@@ -49,6 +50,8 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    AppColor.initialize(context);
+
     return ViewModelBuilder<HomeViewModel>.reactive(
       viewModelBuilder: () => HomeViewModel(),
       builder: (context, viewModel, child) => Scaffold(

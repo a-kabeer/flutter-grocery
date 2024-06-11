@@ -7,6 +7,7 @@ class GlobalText extends StatelessWidget {
   final FontStyle? fontStyle;
   final String? fontFamily;
   final FontWeight? fontWeight;
+
   const GlobalText(
       {super.key,
       required this.text,
@@ -24,7 +25,8 @@ class GlobalText extends StatelessWidget {
           fontSize: fontSize,
           fontStyle: fontStyle,
           fontFamily: fontFamily,
-          fontWeight: fontWeight),
+          fontWeight: fontWeight,
+          color: color),
     );
   }
 }

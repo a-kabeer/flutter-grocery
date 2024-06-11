@@ -10,10 +10,11 @@ class SplashView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    AppColor.initialize(context);
+
     return ViewModelBuilder<SplashViewmodel>.reactive(
       viewModelBuilder: () => SplashViewmodel(),
-      onViewModelReady: (viewModel) =>
-          viewModel.init(context), // Initialization logic here
+      onViewModelReady: (viewModel) => viewModel.init(context),
       builder: (context, viewModel, child) => Scaffold(
         body: Center(
           child: Column(
@@ -24,7 +25,7 @@ class SplashView extends StatelessWidget {
             ],
           ),
         ),
-        backgroundColor: AppColor.greenSwatch,
+        backgroundColor: AppColor.primary,
       ),
     );
   }

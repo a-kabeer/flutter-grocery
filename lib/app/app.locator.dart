@@ -11,7 +11,7 @@ import 'package:stacked_shared/stacked_shared.dart';
 
 import '../services/cart_model.dart';
 import '../services/favorite_model.dart';
-import '../services/theme_model.dart';
+import '../screen/widgets/global_theme_switch.dart';
 
 final locator = StackedLocator.instance;
 

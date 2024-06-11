@@ -3,9 +3,11 @@ import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:grocerystacked/app/app.locator.dart';
 import 'package:grocerystacked/app/app.router.dart';
 import 'package:grocerystacked/firebase_options.dart';
+import 'package:grocerystacked/services/custom_theme_model.dart';
 import 'package:grocerystacked/services/shared_preference_model.dart';
-import 'package:grocerystacked/services/theme_model.dart';
+import 'package:grocerystacked/screen/widgets/global_theme_switch.dart';
 import 'package:flutter/material.dart';
+import 'package:grocerystacked/utils/app_color.dart';
 import 'package:stacked/stacked.dart';
 import 'package:stacked_services/stacked_services.dart';
 
@@ -26,22 +28,26 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    AppColor.initialize(context);
+
     return ViewModelBuilder<ThemeViewModel>.reactive(
       viewModelBuilder: () => locator<ThemeViewModel>(),
-      builder: (context, model, child) => MaterialApp(
+      builder: (context, viewModel, child) => MaterialApp(
         debugShowCheckedModeBanner: false,
         navigatorKey: StackedService.navigatorKey,
         onGenerateRoute: StackedRouter().onGenerateRoute,
         title: 'Grocery App',
         theme: FlexThemeData.light(
-          scheme: FlexScheme.amber,
+          // colors: myCustomScheme.light,
+          scheme: FlexScheme.money,
           useMaterial3: true,
         ),
         darkTheme: FlexThemeData.dark(
-          scheme: FlexScheme.amber,
+          scheme: FlexScheme.money,
           useMaterial3: true,
+          // colors: myCustomScheme.dark,
         ),
-        themeMode: model.themeMode,
+        themeMode: viewModel.themeMode,
       ),
     );
   }

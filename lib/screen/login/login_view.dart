@@ -2,6 +2,7 @@ import 'package:grocerystacked/app/app.form.dart';
 import 'package:grocerystacked/screen/widgets/global_elevated_button.dart';
 import 'package:grocerystacked/screen/widgets/global_form_text_field.dart';
 import 'package:grocerystacked/screen/widgets/global_text.dart';
+import 'package:grocerystacked/utils/app_color.dart';
 import 'package:grocerystacked/utils/app_images.dart';
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
@@ -12,6 +13,7 @@ class LoginView extends StatelessWidget with $App {
 
   @override
   Widget build(BuildContext context) {
+    AppColor.initialize(context);
     return ViewModelBuilder<LoginViewModel>.reactive(
       viewModelBuilder: () => LoginViewModel(),
       // onViewModelReady: (viewModel) => viewModel.init(context),
@@ -39,7 +41,7 @@ class LoginView extends StatelessWidget with $App {
                       Container(
                         width: MediaQuery.of(context).size.width,
                         decoration: BoxDecoration(
-                          color: Theme.of(context).primaryColor,
+                          color: AppColor.secondary,
                           borderRadius: BorderRadius.only(
                               topLeft: Radius.circular(20),
                               bottomRight: Radius.circular(20)),
@@ -47,6 +49,7 @@ class LoginView extends StatelessWidget with $App {
                         height: 50,
                         child: Center(
                           child: GlobalText(
+                            color: AppColor.onSecondary,
                             text: 'Get your groceries with nectar',
                             fontSize: 24,
                             fontWeight: FontWeight.bold,

@@ -2,6 +2,7 @@ import 'package:grocerystacked/app/app.form.dart';
 import 'package:grocerystacked/screen/signup/signup_viewmodel.dart';
 import 'package:grocerystacked/screen/widgets/global_text.dart';
 import 'package:grocerystacked/screen/widgets/golobal_phone_textfield.dart';
+import 'package:grocerystacked/utils/app_color.dart';
 import 'package:grocerystacked/utils/app_images.dart';
 import 'package:grocerystacked/screen/widgets/global_elevated_button.dart';
 import 'package:grocerystacked/screen/widgets/global_form_text_field.dart';
@@ -13,6 +14,8 @@ class SignupView extends StatelessWidget with $App {
 
   @override
   Widget build(BuildContext context) {
+    AppColor.initialize(context);
+
     return ViewModelBuilder<SignupViewModel>.reactive(
       viewModelBuilder: () => SignupViewModel(),
       onViewModelReady: (viewModel) {

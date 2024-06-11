@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grocerystacked/utils/app_color.dart';
 import 'package:intl_phone_number_input/intl_phone_number_input.dart';
 import 'package:stacked/stacked.dart';
 
@@ -53,25 +54,25 @@ class GlobalPhoneTextField extends StatelessWidget {
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(8),
             borderSide: BorderSide(
-              color: Theme.of(context).colorScheme.secondary,
+              color: AppColor.secondary,
             ),
           ),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(8),
             borderSide: BorderSide(
-              color: Theme.of(context).colorScheme.primary,
+              color: AppColor.primary,
             ),
           ),
           errorBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(8),
             borderSide: BorderSide(
-              color: Theme.of(context).colorScheme.error,
+              color: AppColor.error,
             ),
           ),
           disabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(8),
             borderSide: BorderSide(
-              color: Theme.of(context).colorScheme.outline,
+              color: AppColor.outline,
             ),
           ),
           prefixIcon: Padding(
@@ -83,8 +84,7 @@ class GlobalPhoneTextField extends StatelessWidget {
                 showFlags: true,
                 useEmoji: false,
               ),
-              selectorTextStyle:
-                  TextStyle(color: Theme.of(context).colorScheme.onSurface),
+              selectorTextStyle: TextStyle(color: AppColor.onSurface),
               initialValue: viewModel.initialPhoneNumber,
               textFieldController: viewModel.phoneController,
               validator: (_) => null, // Disable validation
@@ -93,7 +93,6 @@ class GlobalPhoneTextField extends StatelessWidget {
               inputDecoration: InputDecoration(
                 border: InputBorder.none, // Remove the default border
                 hintText: 'Enter your phone number',
-                hintStyle: TextStyle(color: Theme.of(context).hintColor),
                 contentPadding: const EdgeInsets.symmetric(vertical: 15),
               ),
               onInputChanged: viewModel.onPhoneNumberChanged,
